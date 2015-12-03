@@ -7,4 +7,7 @@ RUN apt-get update -y \
 
 RUN pip install elasticsearch-curator
 
-CMD /usr/sbin/cron -f
+COPY entrypoint.sh /
+RUN chmod 0755 /entrypoint.sh
+
+CMD /entrypoint.sh

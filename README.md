@@ -23,5 +23,6 @@ This repository contains **Dockerfile** of [elasticsearch-curator](https://www.e
 Start container specifying the executable script for cron:
 
     docker run -d \
-    -v `<script-dir>`/cron.sh:/etc/cron.daily/cron \
+    -v `<script-dir>`/cron.sh:/root/cron.sh \
+    -e CRON_JOB='* * * * * env - `cat ~/env.sh` ~/cron.sh' \
     igortimoshenko/docker-elasticsearch-curator-cron
