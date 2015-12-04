@@ -27,5 +27,5 @@ Start container specifying the executable script for cron:
     -e CRON_JOB='* * * * * ~/cron.sh' \
     igortimoshenko/docker-elasticsearch-curator-cron
 
-> Note that if you need environment variables within your cron script you can
-> export them using the `/root/export-env-vars.sh` script
+> Note that if you need environment variables within your cron script then add
+> the following line `source /root/.env-vars` to your script
