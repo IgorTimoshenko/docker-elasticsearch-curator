@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [elasticsearch-curator](https://www.e
 
 ### Base Docker Image
 
-* [elasticsearch](https://hub.docker.com/_/elasticsearch/)
+* [igortimoshenko/docker-cron-job](https://hub.docker.com/igortimoshenko/docker-cron-job/)
 
 
 ### Installation

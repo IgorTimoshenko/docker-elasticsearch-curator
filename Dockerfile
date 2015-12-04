@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM igortimoshenko/docker-cron-job
 
 RUN apt-get update -y \
     && apt-get install -y \
@@ -6,8 +6,3 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install elasticsearch-curator
-
-COPY entrypoint.sh /
-RUN chmod 0755 /entrypoint.sh
-
-CMD /entrypoint.sh
